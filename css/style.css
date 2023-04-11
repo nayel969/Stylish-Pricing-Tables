@@ -1,0 +1,380 @@
+/*----------------------- 
+      Basic Rulez 
+--------------------------*/
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bx-check {
+  color: #5dd62a;
+  font-size: 20px;
+}
+
+.bx-x {
+  color: #ff0000;
+  font-size: 20px;
+}
+
+/*--------------------- 
+    Custom Component
+----------------------*/
+.fancy__heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.fancy__title {
+  font-size: 45px;
+  font-weight: 800;
+  background: linear-gradient(to right, #fcfcfc 50%, #000 50%, #666);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200%;
+  text-transform: uppercase;
+  transition: 0.3s ease-out;
+  -webkit-transition: 0.3s ease-out;
+  -moz-transition: 0.3s ease-out;
+  -ms-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+}
+
+@media (max-width: 540px) {
+  .fancy__title {
+    font-size: 32px;
+  }
+}
+
+.fancy__title:hover {
+  background-position: -100%;
+}
+
+/*--------------------------- 
+        Pricing Table 
+--------------------------*/
+.pricing {
+  background-color: #bebebe;
+  padding: 80px 0;
+}
+
+.price__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+}
+
+.price__box {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.price__img {
+  max-width: 100%;
+  filter: drop-shadow(0 0 0.75rem rgba(55, 55, 55, 0.377));
+  -webkit-filter: drop-shadow(0 0 0.75rem rgba(55, 55, 55, 0.377));
+}
+
+.price__head {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 25px;
+}
+
+.price__title {
+  font-weight: 800;
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+.price__title > span {
+  font-weight: 200;
+}
+
+.price__des {
+  line-height: 1.5;
+  font-size: 15px;
+  font-weight: 300;
+  padding: 0 90px;
+  color: #999;
+}
+
+.price__mid {
+  position: absolute;
+  top: 54%;
+  transform: translateY(-47%);
+  -webkit-transform: translateY(-47%);
+  -moz-transform: translateY(-47%);
+  -ms-transform: translateY(-47%);
+  -o-transform: translateY(-47%);
+}
+
+.price__mid > a {
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.price__content {
+  position: absolute;
+  bottom: 9%;
+}
+
+.price__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-bottom: 20px;
+}
+
+.price__item {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.price__item > span {
+  color: #999;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.price__num {
+  display: flex;
+  justify-content: center;
+  column-gap: 5px;
+}
+
+.price__num > h3 {
+  font-weight: 700;
+  font-size: 45px;
+}
+
+.price__num > span {
+  padding-top: 6px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/*** Red Table ***/
+.red .price__title {
+  color: #ff0000;
+}
+
+.red .price__mid > a {
+  color: #ff0000;
+}
+
+.red .price__mid > a:hover {
+  text-shadow: 1px 1px 10px #ff0000;
+}
+
+.red .price__num > h3,
+.red .price__num > span {
+  color: #ff0000;
+}
+
+/*** Yellow Table ***/
+.yellow .price__title {
+  color: #f2da00;
+}
+
+.yellow .price__mid > a {
+  color: #f2da00;
+}
+
+.yellow .price__mid > a:hover {
+  text-shadow: 1px 1px 10px #f2da00;
+}
+
+.yellow .price__num > h3,
+.yellow .price__num > span {
+  color: #f2da00;
+}
+
+/*** Green Table ***/
+.green .price__title {
+  color: #71e93e;
+}
+
+.green .price__mid > a {
+  color: #71e93e;
+}
+
+.green .price__mid > a:hover {
+  text-shadow: 1px 1px 10px #71e93e;
+}
+
+.green .price__num > h3,
+.green .price__num > span {
+  color: #71e93e;
+}
+
+/*========================
+       Media Queries 
+========================*/
+@media (max-width: 412px) {
+  .price__title {
+    font-size: 28px;
+  }
+
+  .price__des {
+    padding: 0 70px;
+  }
+
+  .price__mid > a {
+    font-size: 18px;
+  }
+
+  .price__content {
+    bottom: 7%;
+  }
+
+  .price__num > h3 {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  /*** Small Screens ***/
+  .container {
+    width: 750px;
+  }
+
+  .price__title {
+    font-size: 30px;
+  }
+
+  .price__des {
+    padding: 0 85px;
+  }
+}
+
+@media (min-width: 992px) {
+  /*** Medium Screens ***/
+  .container {
+    width: 980px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .price__title {
+    font-size: 27px;
+  }
+
+  .price__des {
+    padding: 0 70px;
+  }
+
+  .price__mid > a {
+    font-size: 18px;
+  }
+
+  .price__content {
+    bottom: 7%;
+  }
+
+  .price__num > h3 {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /*** Large Screens ***/
+  .container {
+    width: 1170px;
+  }
+
+  .price__title {
+    font-size: 32px;
+  }
+
+  .price__des {
+    padding: 0 90px;
+  }
+
+  .price__mid > a {
+    font-size: 20px;
+  }
+
+  .price__content {
+    bottom: 9%;
+  }
+
+  .price__num > h3 {
+    font-size: 45px;
+  }
+}
+
+/*********| Stupid Media Query <1>  |**********/
+@media (min-width: 425px) and (max-width: 649px) {
+  .price__box {
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .price__des {
+    padding: 0 100px;
+  }
+
+  .price__content {
+    bottom: 10%;
+  }
+}
+
+/*********| Stupid Media Query <2>  |**********/
+@media (min-width: 650px) and (max-width: 767px) {
+  .price__title {
+    font-size: 28px;
+  }
+
+  .price__des {
+    padding: 0 65px;
+  }
+
+  .price__mid > a {
+    font-size: 18px;
+  }
+
+  .price__content {
+    bottom: 6%;
+  }
+
+  .price__num > h3 {
+    font-size: 40px;
+  }
+}
