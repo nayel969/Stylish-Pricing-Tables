@@ -1,6 +1,6 @@
 # Stylish Pricing Tables
 
-Simple responsive pricing tables section, with vector images converted into PNG extension. Designed with <3 using HTML & CSS.
+Simple responsive pricing tables section, with vector images converted into PNG extension. Designed with ❤ using HTML & CSS.
 
 ## Screenshot:
 
